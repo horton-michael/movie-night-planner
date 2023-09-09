@@ -136,7 +136,9 @@ function getOmbdData(data) {
       .then(function (data) {
         if (data) {
           console.log(data);
-        } else {
+          localStorage.setItem("durationData", JSON.stringify(data));
+        }
+         else {
           console.log("no data received from OMDB");
         }
       });
